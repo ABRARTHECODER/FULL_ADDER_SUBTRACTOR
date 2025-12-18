@@ -37,19 +37,59 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+FULL ADDER
+<img width="539" height="480" alt="TRUTH TABLE FULLL ADDED" src="https://github.com/user-attachments/assets/9a4db3cf-09a5-491b-9a2d-358f35d0c28f" />
+FULL SUBTRACTOR
+<img width="558" height="495" alt="FULL SUBTRACTOR" src="https://github.com/user-attachments/assets/91bd611d-2977-4712-a366-35fdd3627c19" />
+
+
 
 **Procedure**
 
-Write the detailed procedure here
+Type the program in Quartus software.
+
+Compile and run the program.
+
+Generate the RTL schematic and save the logic diagram.
+
+Create nodes for inputs and outputs to generate the timing diagram.
+
+For different input combinations generate the timing diagram.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+```
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+Developed by: MOHAMED ABRAR M
+RegisterNumber:25009852
+
+     i)FULL ADDER
+  
+  module fa(a,b,cin,sum,carry);
+  input a,b,cin;
+  output sum,carry;
+  assign sum=( (a ^ b)^cin);
+  assign carry= ( (a & b)| ( cin &(a ^ b )));
+  endmodule
+  
+  ii)FULL SUBTRACTOR
+  
+  module fs(a,b,bin,difference,borrow);
+  input a,b,bin;
+  output difference,borrow;
+  assign difference= ( (a ^ b)^bin);
+  assign borrow= ( ( a & b)| ( bin & ((a ^ b ))));
+  endmodule
 */
+```
 
 **RTL Schematic**
+<img width="1886" height="1026" alt="RTL SCHEME" src="https://github.com/user-attachments/assets/38fe7ca1-a2be-4440-be99-718b78af9964" />
+<img width="1866" height="948" alt="RTL 2" src="https://github.com/user-attachments/assets/5ec77c02-1ad8-4934-9305-edbe189a8496" />
 
 **Output Timing Waveform**
+<img width="801" height="259" alt="WAVE 1" src="https://github.com/user-attachments/assets/f2f9bf68-33e5-41dc-9885-40ca093a5c26" />
+<img width="807" height="177" alt="WAVE2" src="https://github.com/user-attachments/assets/bd2bf4a6-6632-49b3-8135-7e6470329c66" />
 
 **Result:**
 
